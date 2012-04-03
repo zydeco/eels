@@ -1,0 +1,9 @@
+##grflangid 0x31
+
+STR_GRF_NAME            :Anguías
+STR_GRF_DESCRIPTION     :Enche o teu aerodeslizador delas
+
+STR_NAME_EELS           :Anguías
+STR_UNIT_NAME_EELS      :Anguía
+STR_UNIT_EELS           :{WEIGHT} de anguías
+STR_TYPE_EELS_ABBR      :{TINYFONT}AG

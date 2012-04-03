@@ -1,0 +1,9 @@
+##grflangid 0x04
+
+STR_GRF_NAME            :Anguilas
+STR_GRF_DESCRIPTION     :Llena tu hovercraft
+
+STR_NAME_EELS           :Anguilas
+STR_UNIT_NAME_EELS      :Anguila
+STR_UNIT_EELS           :{WEIGHT} de anguilas
+STR_TYPE_EELS_ABBR      :{TINYFONT}AG

@@ -1,0 +1,9 @@
+##grflangid 0x02
+
+STR_GRF_NAME            :Aale
+STR_GRF_DESCRIPTION     :Fülle dein hovercraft mit ihnen
+
+STR_NAME_EELS           :Aale
+STR_UNIT_NAME_EELS      :Aal
+STR_UNIT_EELS           :{WEIGHT} Aale
+STR_TYPE_EELS_ABBR      :{TINYFONT}AL

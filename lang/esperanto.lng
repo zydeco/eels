@@ -1,0 +1,9 @@
+##grflangid 0x05
+
+STR_GRF_NAME            :Angiloj
+STR_GRF_DESCRIPTION     :Plenigi ilin per viaj aeroglita
+
+STR_NAME_EELS           :Angiloj
+STR_UNIT_NAME_EELS      :Angilo
+STR_UNIT_EELS           :{WEIGHT} da angiloj
+STR_TYPE_EELS_ABBR      :{TINYFONT}AG

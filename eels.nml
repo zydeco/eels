@@ -1,0 +1,201 @@
+grf {
+    grfid : "EELS";
+    name : string(STR_GRF_NAME);
+    desc : string(STR_GRF_DESCRIPTION);
+    version: 0;
+    min_compatible_version: 0;
+}
+
+cargotable {
+    PASS, MAIL, OIL_, FRUT, MAIZ, WHEA, LVST, EELS
+}
+
+spriteset(eel_icon) {
+    [0, 0, 10, 10, 0, 0, "eel_icon.png"]
+}
+
+item (FEAT_CARGOS, cargo_eels, 29) {
+    property {
+        number: 29;
+        type_name: string(STR_NAME_EELS);
+        unit_name: string(STR_UNIT_NAME_EELS);
+        single_unit_text: string(STR_UNIT_EELS);
+        multiple_units_text: string(STR_UNIT_EELS);
+        type_abbreviation: string(STR_TYPE_EELS_ABBR);
+        is_freight: 1;
+        sprite: NEW_CARGO_SPRITE;
+        weight: 1;
+        price_factor: 133;
+        penalty_lowerbound: 12;
+        single_penalty_length: 64;
+        station_list_colour: 87;
+        cargo_payment_list_colour: 87;
+        cargo_classes: bitmask(CC_LIQUID);
+        cargo_label: "EELS";
+        town_growth_effect: TOWNGROWTH_NONE;
+    }
+    graphics {
+        eel_icon;
+    }
+}
+
+item(FEAT_SHIPS, bakewell_300_hovercraft, 4) {
+    property {
+        introduction_date:              date(1945,1,1);
+        cargo_allow_refit:              [PASS, EELS];
+        is_refittable:                  1;
+    }
+}
+
+if(climate == CLIMATE_TEMPERATE || climate == CLIMATE_ARCTIC || climate == CLIMATE_TROPICAL) {
+    item(FEAT_INDUSTRIES, oil_rig, INDUSTRYTYPE_OIL_RIG) {
+        property {
+            substitute: INDUSTRYTYPE_OIL_RIG;
+            override: INDUSTRYTYPE_OIL_RIG;
+            prod_cargo_types: [OIL_, EELS];
+            prod_multiplier: [15, 8];
+            prob_random: 9;
+            prob_in_game: 7;
+        }
+    }
+}
+
+/* temperate farms increase production by accepting eels */
+if(climate == CLIMATE_TEMPERATE) {
+    item(FEAT_INDUSTRIES, ta_farm, INDUSTRYTYPE_TEMPERATE_ARCTIC_FARM) {
+        property {
+            substitute: INDUSTRYTYPE_TEMPERATE_ARCTIC_FARM;
+            override: INDUSTRYTYPE_TEMPERATE_ARCTIC_FARM;
+            accept_cargo_types: [EELS];
+            input_multiplier_1: [1.2, 1.7];
+        }
+    }
+    
+    item(FEAT_INDUSTRYTILES, item_ta_farm_34, 34) {
+        property {
+            substitute: 34;
+            override: 34;
+            accepted_cargos: [[EELS, 8]];
+        }
+    }
+    
+    item(FEAT_INDUSTRYTILES, item_ta_farm_35, 35) {
+        property {
+            substitute: 35;
+            override: 35;
+            accepted_cargos: [[EELS, 8]];
+        }
+    }
+    
+    item(FEAT_INDUSTRYTILES, item_ta_farm_36, 36) {
+        property {
+            substitute: 36;
+            override: 36;
+            accepted_cargos: [[EELS, 8]];
+        }
+    }
+    
+    item(FEAT_INDUSTRYTILES, item_ta_farm_37, 37) {
+        property {
+            substitute: 37;
+            override: 37;
+            accepted_cargos: [[EELS, 8]];
+        }
+    }
+    
+    item(FEAT_INDUSTRYTILES, item_ta_farm_38, 38) {
+        property {
+            substitute: 38;
+            override: 38;
+            accepted_cargos: [[EELS, 8]];
+        }
+    }
+}
+
+/* arctic food processing plant accepts wheat, livestock and eels */
+if (climate == CLIMATE_ARCTIC) {
+    item(FEAT_INDUSTRIES, food, INDUSTRYTYPE_FOOD_PROCESSING_PLANT) {
+        property {
+            substitute: INDUSTRYTYPE_FOOD_PROCESSING_PLANT;
+            override: INDUSTRYTYPE_FOOD_PROCESSING_PLANT;
+            accept_cargo_types: [WHEA, LVST, EELS];
+            input_multiplier_3: [1, 0];
+        }
+    }
+    
+    item(FEAT_INDUSTRYTILES, item_foodpp_tile_60, 60) {
+        property {
+            substitute: 60;
+            override: 60;
+            accepted_cargos: [[WHEA, 8], [LVST, 8], [EELS, 8]];
+        }
+    }
+
+    item(FEAT_INDUSTRYTILES, item_foodpp_tile_61, 61) {
+        property {
+            substitute: 61;
+            override: 61;
+            accepted_cargos: [[WHEA, 8], [LVST, 8], [EELS, 8]];
+        }
+    }
+
+    item(FEAT_INDUSTRYTILES, item_foodpp_tile_62, 62) {
+        property {
+            substitute: 62;
+            override: 62;
+            accepted_cargos: [[WHEA, 8], [LVST, 8], [EELS, 8]];
+        }
+    }
+
+    item(FEAT_INDUSTRYTILES, item_foodpp_tile_63, 63) {
+        property {
+            substitute: 63;
+            override: 63;
+            accepted_cargos: [[WHEA, 8], [LVST, 8], [EELS, 8]];
+        }
+    }
+}
+
+/* tropical food processing plant accepts maize, fruit and eels */
+if (climate == CLIMATE_TROPICAL) {
+    item(FEAT_INDUSTRIES, food, INDUSTRYTYPE_FOOD_PROCESSING_PLANT) {
+        property {
+            substitute: INDUSTRYTYPE_FOOD_PROCESSING_PLANT;
+            override: INDUSTRYTYPE_FOOD_PROCESSING_PLANT;
+            accept_cargo_types: [MAIZ, FRUT, EELS];
+            input_multiplier_3: [1, 0];
+        }
+    }
+    
+    item(FEAT_INDUSTRYTILES, item_foodpp_tile_60, 60) {
+        property {
+            substitute: 60;
+            override: 60;
+            accepted_cargos: [[MAIZ, 8], [FRUT, 8], [EELS, 8]];
+        }
+    }
+
+    item(FEAT_INDUSTRYTILES, item_foodpp_tile_61, 61) {
+        property {
+            substitute: 61;
+            override: 61;
+            accepted_cargos: [[MAIZ, 8], [FRUT, 8], [EELS, 8]];
+        }
+    }
+
+    item(FEAT_INDUSTRYTILES, item_foodpp_tile_62, 62) {
+        property {
+            substitute: 62;
+            override: 62;
+            accepted_cargos: [[MAIZ, 8], [FRUT, 8], [EELS, 8]];
+        }
+    }
+
+    item(FEAT_INDUSTRYTILES, item_foodpp_tile_63, 63) {
+        property {
+            substitute: 63;
+            override: 63;
+            accepted_cargos: [[MAIZ, 8], [FRUT, 8], [EELS, 8]];
+        }
+    }
+}

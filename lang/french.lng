@@ -1,0 +1,9 @@
+##grflangid 0x03
+
+STR_GRF_NAME            :Anguilles
+STR_GRF_DESCRIPTION     :Remplissez votre aéroglisseur avec eux
+
+STR_NAME_EELS           :Anguilles
+STR_UNIT_NAME_EELS      :Anguille
+STR_UNIT_EELS           :{WEIGHT} d'anguilles
+STR_TYPE_EELS_ABBR      :{TINYFONT}AG

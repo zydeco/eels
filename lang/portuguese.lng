@@ -1,0 +1,9 @@
+##grflangid 0x36
+
+STR_GRF_NAME            :Enguias
+STR_GRF_DESCRIPTION     :Preenche o teu hovercraft
+
+STR_NAME_EELS           :Enguia
+STR_UNIT_NAME_EELS      :Enguias
+STR_UNIT_EELS           :{WEIGHT} de enguias
+STR_TYPE_EELS_ABBR      :{TINYFONT}EG

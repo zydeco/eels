@@ -1,0 +1,9 @@
+##grflangid 0x2f
+
+STR_GRF_NAME            :Ål
+STR_GRF_DESCRIPTION     :Fyll din luftputebåt med dem
+
+STR_NAME_EELS           :Ål
+STR_UNIT_NAME_EELS      :Ål
+STR_UNIT_EELS           :{WEIGHT} ål
+STR_TYPE_EELS_ABBR      :{TINYFONT}AL

@@ -1,0 +1,9 @@
+##grflangid 0x00
+
+STR_GRF_NAME            :Eels
+STR_GRF_DESCRIPTION     :Fill your hovercraft will them
+
+STR_NAME_EELS           :Eels
+STR_UNIT_NAME_EELS      :Eel
+STR_UNIT_EELS           :{WEIGHT} of eels
+STR_TYPE_EELS_ABBR      :{TINYFONT}EE
